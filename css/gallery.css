@@ -1,0 +1,665 @@
+@font-face {
+    font-family: 'ActayWide';
+    src: url('../fonts/ActayWide-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0; /* Отключает внешние отступы у всех элементов */
+    padding: 0; /* То же самое, но для внутренних отступов */
+    box-sizing: border-box; /* Говорит браузеру считать padding и border внутрь ширины и высоты элемента */
+}
+
+.container {
+    max-width: 1440px; /* Основной контент сосредоточен на 1440px */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: 'Involve', sans-serif;
+    background-color: #F5F1EC; /* Светлый фон */
+    color: #465036; /* Тёмно-зелёный цвет текста */
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: fixed;         /* фиксируем хэдер */
+    top: 0;                  /* прижимаем его к верхней части окна */
+    left: 0;                 /* прижимаем к левому краю */
+    width: 100%;             /* на всю ширину экрана */
+    z-index: 999;            /* чтобы был поверх всего остального */
+
+    background-color: #465036;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Involve', sans-serif;
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* Выравнивание логотипа и меню по вертикали */
+    gap: 50px; /* Отступ между логотипом и меню */
+}
+
+.logo img {
+    width: 40px;
+    height: 42px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 56px; /* Отступы между пунктами навигации 56px */
+}
+
+nav ul li a {
+    color: #F5F1EC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Блок справа (иконки и номер телефона) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Отступы между иконками и номером 32px */
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.phone {
+    color: #F5F1EC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.phone:hover {
+    text-decoration: underline;
+}
+
+/*----------- скрытие мобилки для десктопа ---------------*/
+@media (min-width: 769px) {
+    .burger,
+    .mobile-menu,
+    .overlay {
+      display: none !important;
+    }
+}
+
+
+
+/* ---------------- 1 блок ---------------- */
+.gallery-hero {
+    position: relative;
+    width: 1440px;
+    height: 802px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Контейнер с текстом поверх фото */
+.gallery-hero-content {
+    position: absolute;
+    bottom: 32px;
+    left: 20px;
+    color: #ffffff;
+    width: 963px;
+}
+
+.gallery-hero-title {
+    font-family: 'Involve', sans-serif;
+    font-size: 60px;
+    margin: 0 0 23px 0;
+}
+
+.gallery-hero-subtitle {
+    font-size: 23px;
+    font-family: 'Involve', sans-serif;
+    width: 963px;
+    margin: 0 0 34px 0;
+    line-height: 1.5;
+}
+
+.gallery-hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Кнопки */
+.hero-button {
+    width: 363px;
+    height: 67px;
+    font-size: 23px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Involve', sans-serif;
+}
+
+/* Кнопка Записаться */
+.register-btn {
+    background-color: #465036;
+    color: #ffffff;
+    border: 1px solid transparent; /* прозрачная рамка по умолчанию */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+.register-btn:hover {
+    background-color: #ffffff;
+    color: #465036;
+    border: 1px solid #333333;
+}
+
+/* Кнопка Купить сертификат */
+.gift-btn {
+    background-color: #F5F1EC;
+    color: #465036;
+    border: 1px solid #333333;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+a.gift-btn{
+    display: inline-block;
+    text-align: center;
+    line-height: 67px; /* центрируем текст по вертикали */
+    text-decoration: none; /* убираем подчёркивание */
+}
+
+
+.gift-btn:hover {
+    background-color: #465036;
+    color: #ffffff;
+    border: none;
+}
+
+/* ---------------- 2 блок Интерьер ---------------- */
+
+/* Отступ сверху от первого блока до второго */
+.gallery-interior {
+  margin-top: 70px;
+}
+
+/* Заголовок h2 "Интерьер салона" */
+.gallery-title {
+  font-size: 60px;
+  color: #465036;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-family: 'Involve', sans-serif;
+  font-weight: 700;
+}
+
+/* Сетка 6 фотографий — 3 в ряд */
+.gallery-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* отступы между фото и между рядами */
+  margin: 0 20px; /* отступы от краев страницы слева и справа */
+}
+
+/* ---------------- 3 блок Процедурные кабы ---------------- */
+
+/* Обертка блока с отступами слева и справа */
+.gallery-rooms {
+  margin-top: 70px;
+  padding: 0 20px; /* отступы слева и справа */
+  box-sizing: border-box;
+  max-width: calc(3 * 460px + 4 * 20px); 
+}
+
+/* Заголовок h3 */
+.gallery-subtitle {
+  font-size: 60px;
+  color: #465036;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: 'Involve', sans-serif;
+  font-weight: 700;
+  padding-left: 0; /* убираем левый отступ */
+}
+
+/* Сетка из трех фото */
+.gallery-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 равных колонки */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Фото */
+.gallery-grid-3 img {
+  width: 100%;
+  height: 295px;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ----------- FOOTER ----------- */
+
+footer {
+    background-color: #465036;
+    width: 1440px;
+    height: 179px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 20px 0 20px;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: 'Involve', sans-serif;
+}
+
+/* Левая часть футера */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left .copyright {
+    margin-bottom: 16px;
+}
+
+.footer-left .policy {
+    margin-bottom: 16px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    width: fit-content;
+}
+
+.footer-left .rights {
+    margin: 0;
+}
+
+/* Правая часть футера */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -6px; /* чтобы телефон был на 32px от верха */
+}
+
+.footer-right .phone {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer-right .phone:hover{
+    text-decoration: underline;
+}
+
+.footer-right .email {
+    margin-bottom: 16px;
+}
+
+.footer-right .socials {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+}
+
+.footer-right .social-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px){
+    body {
+        padding-bottom: 50px;
+    }
+    header {
+        position: fixed;         /* фиксируем хэдер */
+        top: 0; 
+        z-index: 999;  
+        width: 375px; /* Ограничиваем максимальную ширину */
+        height: 62px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #465036;
+    }
+
+    /* Скрываем ВСЁ, что не нужно в мобилке */
+    .header-left nav,
+    .header-left .logo,
+    .phone,
+    .footer,
+    .footer-left,
+    .footer-right {
+        display: none !important
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 375px;
+        height: 490px;
+        background-color: #F5F1EC;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.5); /* полупрозрачный белый */
+        z-index: 998; /* ниже, чем меню с 999 */
+    }
+    
+    
+    .close-btn {
+        position: absolute;
+        top: 43px;
+        right: 16px;
+        width: 21px;
+        height: 21px;
+        font-size: 40px;
+        line-height: 21px;
+        text-align: center;
+        color: #808080;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .mobile-menu-list {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-left: 16px;
+        list-style: none;
+        margin-top: 45px;
+    }
+    
+    .mobile-menu-list li {
+        font-family: 'InvolveBold', sans-serif;
+        margin-bottom: -30px;
+        display: block; /* важно, чтобы пункты шли в столбик */
+    }
+    
+    .mobile-menu-list li a {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #465036;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .mobile-contacts {
+        margin-top: 87px;
+        padding-left: 16px;
+        font-size: 13px;
+        color: #465036;
+    }
+
+    .mobile-contacts .phone-mobile {
+        margin-top: 0;
+        color: #465036;
+        text-decoration: none;
+    }
+    
+    .mobile-contacts .email {
+        margin-top: 10px;
+    }
+    
+    .no-scroll {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    /* Бургер-меню */
+    .burger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 15px; /* 3 линии по 2px + 2 промежутка по 6px */
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        display: block;
+        width: 29px;
+        height: 1.5px;
+        background: #F5F1EC;
+        transition: all 0.3s;
+    }
+
+    /* Иконки справа */
+    .header-right {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header-right .social-icon img {
+        width: 27px;
+        height: 27px;
+    }
+
+    /*-------- 1 блок  ---------*/
+    .gallery-hero {
+        margin-top: 62px;
+        width: 100%;
+        height: 513px;
+        position: relative;
+    }
+    
+    .gallery-hero-image {
+        width: 100%;
+        height: 513px;
+        width: 375px;
+        object-fit: cover;
+        object-position: left;
+    }
+    
+    .gallery-hero-content {
+        position: absolute;
+        bottom: 16px; /* 178 + 10 + 14 + 16 + 41 ≈ 259 от низа — это мы поднимаем всю группу выше, чтобы она влезла */
+        left: 16px;
+        width: calc(100% - 32px);
+        color: #ffffff;
+    }
+    
+    .gallery-hero-title {
+        font-size: 30px;
+        margin: 0 0 10px 0;
+    }
+    
+    .gallery-hero-subtitle {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+    }
+    
+    .gallery-hero-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+    
+    .hero-button {
+        width: 164px;
+        height: 41px;
+        font-size: 14px;
+        border-radius: 40px;
+    }
+    
+    a.gift-btn {
+        line-height: 41px;
+    }
+
+
+    .gallery-interior {
+        margin-top: 50px;
+        max-width: 100%; /* чтоб не ограничивался максимальной шириной */
+        box-sizing: border-box;
+    }
+    
+    .gallery-title {
+        font-size: 24px;
+        text-align: left;
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .gallery-grid-6 {
+        margin-left: 16px;
+        width: 344px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 фото в ряд */
+        gap: 8px; /* между фото и рядами */
+    }
+    
+    .gallery-grid-6 img {
+        width: 166px;
+        height: 105px; /* как в предыдущем блоке */
+        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /*------- 3 блок с фотками (3 фото)---------*/
+    .gallery-rooms {
+        margin-top: 40px;
+        padding: 0 16px; /* добавим отступы слева и справа */
+        max-width: 100%; /* чтоб не ограничивался максимальной шириной */
+        box-sizing: border-box;
+    }
+      
+    .gallery-subtitle {
+        font-size: 24px;
+        margin-bottom: 16px; /* чтобы заголовок отделялся от сетки */
+        color: #465036;
+        text-align: left;
+        font-weight: 700;
+        font-family: 'Involve', sans-serif;
+        padding-left: 0;
+    }
+      
+    .gallery-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+        gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+      
+    /* фото */
+    .gallery-grid-3 img {
+        width: 100%;
+        height: 105px; /* как в предыдущем блоке */
+        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+    }
+      
+    /* чтобы во втором ряду была одна фотка, выровненная по левому краю */
+    .gallery-grid-3 img:nth-child(3) {
+        grid-column: 1 / 2; /* занимает первую колонку */
+        justify-self: start; /* выравнивание по левому краю */
+        width: 166px; /* фиксируем ширину фото */
+        height: 105px;
+    }
+
+    /* Оверлей поверх страницы */
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.5); /* белый с прозрачностью 50% */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    /* Контейнер с увеличенным фото */
+    .modal-content {
+        position: relative;
+    }
+    
+    /* Увеличенное фото */
+    .modal-content img {
+        width: 345px;
+        height: 221px;
+        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* добавлена тень */
+    }
+
+    
+    .closebtn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        background: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        padding: 0;
+    }
+
+    /*------- скрываем футер --------*/
+    footer {
+        display: none;
+    }
+}

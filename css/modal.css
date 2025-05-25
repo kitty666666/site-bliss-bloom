@@ -1,0 +1,290 @@
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'InvolveBold';
+  src: url('../fonts/Involve.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  width: 700px;
+  height: 650px;
+  background-color: #F5F1EC;
+  border-radius: 20px;
+  padding: 30px 0 0;
+  text-align: center;
+  border: 1px solid #465036;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 60px;
+  color: #465036;
+  margin-bottom: 2px;
+  font-family: 'Involve', sans-serif;
+}
+
+.modal-subtitle {
+  width: 500px;
+  height: 48px;
+  font-size: 18px;
+  color: #333333;
+  margin: 0 auto 22px;
+  font-family: 'Involve', sans-serif;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  width: 500px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  padding: 0 0 0 31px;
+  box-sizing: border-box;
+  font-family: 'Involve', sans-serif;
+  line-height: 50px;
+  color: #333333; /* основной цвет текста */
+}
+
+/* placeholder по умолчанию */
+.input-field input::placeholder {
+  color: #808080 !important;
+}
+
+/* placeholder (совместимость для поля даты) */
+.input-field input[type="date"]::placeholder {
+  color: #808080 !important;
+}
+
+/* цвет текста input[type="date"] до выбора даты */
+.input-field input[type="date"]:not(:valid)::-webkit-datetime-edit {
+  color: #808080;
+}
+
+/* после выбора — тёмный текст */
+.input-field input[type="date"]:valid::-webkit-datetime-edit,
+.input-field input[type="date"]:valid::-webkit-datetime-edit-text {
+  color: #333333;
+}
+
+
+/* select */
+.input-field select {
+  color: #808080;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.input-field select option {
+  color: #333333;
+}
+
+/* иконка календаря */
+.input-field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  margin-right: 118px;
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.modal-submit {
+  width: 500px;
+  height: 50px;
+  background-color: #465036;
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: 'Involve', sans-serif;
+  line-height: 50px;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+.modal-submit:hover {
+  background-color: #FFFFFF;
+  color: #465036;
+  border: 1px solid #333333;
+}
+
+
+/* Второе модальное окно: Услуга и название */
+#modalOverlayService {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-service-row {
+  margin-top: 16px;
+  font-family: 'InvolveBold', sans-serif;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 23px;
+  color: #465036; /* цвет */
+}
+
+
+.modal-service-label,
+.modal-service-name {
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 345px;
+    height: 508px;
+    padding-top: 20px;
+    border-radius: 20px;
+  }
+
+  .modal-title {
+    font-size: 30px;
+  }
+
+  .modal-subtitle {
+    font-size: 12px;
+    width: 324px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+  
+  .input-field input[type="email"] {
+    width: 314px !important;
+    height: 41px !important;
+    font-size: 14px !important;
+    padding-left: 31px !important;
+    line-height: 41px !important;
+  }
+
+  .modal-close {
+    width: 15.2px;
+    height: 15.2px;
+    font-size: 16px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .input-field {
+    width: 314px !important;
+    height: 41px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .input-field input,
+  .input-field select {
+    font-size: 14px !important;
+    padding-left: 31px !important;
+    line-height: 41px !important;
+  }
+
+  .modal-submit {
+    width: 314px;
+    height: 41px;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 41px;
+  }
+
+  /* иконка календаря */
+  .input-field input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    margin-right: 35px;
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+  }
+
+
+  /* Второе модальное окно: Услуга и название */
+  #modalOverlayService {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal-service-row {
+    margin-top: 16px;
+    font-family: 'InvolveBold', sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    color: #465036; /* цвет */
+  }
+
+
+  .modal-service-label,
+  .modal-service-name {
+    font-weight: normal;
+  }
+}

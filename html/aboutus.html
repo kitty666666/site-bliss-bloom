@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script src="../js/modal.js"></script>
+    <script src="../js/mobile.js"></script>
+</head>
+
+<body>
+    <!-- Хэдер -->
+    <header class="container header-flex">
+        <!-- Бургер (только для мобилки) -->
+        <button class="burger" aria-label="Меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <!-- Мобильное меню только для мобилки -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <button class="close-btn" aria-label="Закрыть меню">×</button>
+            <ul class="mobile-menu-list">
+                <li><a href="../html/index.html">Главная</a></li>
+                <li><a href="../html/services.html">Услуги</a></li>
+                <li><a href="../html/masters.html">Мастера</a></li>
+                <li><a href="../html/sertificate.html">Сертификаты</a></li>
+                <li><a href="../html/gallery.html">Галерея</a></li>
+                <li><a href="../html/aboutus.html">О нас</a></li>
+                <li><a href="../html/otziv.html">Отзывы</a></li>
+            </ul>            
+            <div class="mobile-contacts">
+                <a href="tel:+79147313141" class="phone-mobile">+7 914 731-31-41</a>
+                <p class="email">blissbloom@mail.ru</p>
+            </div>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- только для десктопа --> 
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.svg" alt="Логотип Bliss Bloom" width="54.47" height="56">
+            </a>
+            <nav aria-label="Основная навигация">
+                <ul>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="masters.html">Мастера</a></li>
+                    <li><a href="sertificate.html">Сертификаты</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="aboutus.html">О нас</a></li>
+                    <li><a href="otziv.html">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <a href="https://t.me/sloborzhakka" class="social-icon">
+                <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+            </a>
+            <a href="https://vk.com/blissbloom" class="social-icon">
+                <img src="../images/vk.svg" alt="VK" width="35" height="35">
+            </a>
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+        </div>
+    </header>
+
+    <!-- 1 блок -->    
+    <section class="aboutus-hero">
+        <img src="../images/мастера главное.png" alt="Интерьер зоны отдыха с бассейном" class="aboutus-hero-image">
+    
+        <div class="aboutus-hero-content">
+            <h1 class="aboutus-hero-title">О нас</h1>
+            <p class="aboutus-hero-subtitle">
+                Наши специалисты — команда профессионалов, стремящихся подарить вам внимание и индивидуальный подход. Мы верим, что каждый момент, проведённый в нашем салоне, это шаг к внутреннему обновлению и гармонии.
+            </p>
+            <div class="aboutus-hero-buttons">
+                <button class="hero-button register-btn">Записаться</button>
+                <a href="sertificate.html" class="hero-button gift-btn">Купить сертификат</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 блок --> 
+    <div class="about-history">
+
+        <h2 class="about-history-title">Наша история</h2>
+      
+        <p class="about-history-text">
+          История спа-салона «Блисс Блум» началась в 2017 году с желания создать уникальное место, где каждый клиент мог бы найти спокойствие, гармонию и полное расслабление. С момента своего открытия наш салон стремится предоставить услуги высочайшего качества, ориентируясь на новейшие тенденции в индустрии wellness и красоты.
+        </p>
+      
+        <div class="about-history-photos">
+            <div>
+                <img src="../images/наша история 2017.png" alt="Фото нашего салона 2017 год">
+                <div class="about-history-caption">2017</div>
+            </div>
+            <div>
+                <img src="../images/наша история 2018.png" alt="Фото нашего салона 2018 год">
+                <div class="about-history-caption">2018</div>
+            </div>
+            <div>
+                <img src="../images/наша история 2019.png" alt="Фото нашего салона 2019 год">
+                <div class="about-history-caption">2019</div>
+            </div>
+        </div>
+    </div>
+      
+    <!-- Третий блок - Контакты -->
+    <div class="about-contacts">
+        <h3 class="about-contacts-title">Наши контакты</h3>
+    
+        <div class="about-contacts-wrapper">
+            <!-- Левый блок с контактами -->
+            <div class="contact-info">
+                <div class="contact-item">
+                <div class="contact-circle">1</div>
+                <div class="contact-text">
+                    г. Киров, ул. Володарского, 11 (бесплатная парковка)
+                </div>
+                </div>
+        
+                <div class="contact-item">
+                <div class="contact-circle">2</div>
+                <div class="contact-text">Режим работы: с 9:00 до 22:00</div>
+                </div>
+        
+                <div class="contact-item">
+                    <div class="contact-circle">3</div>
+                    <div class="contact-text">
+                      Телефон: <a href="tel:+79345103164" class="phone-link">+7 934 510-31-64</a>
+                    </div>
+                </div>
+        
+                <div class="contact-social">
+                <a href="https://t.me/sloborzhakka" target="_blank" class="social-link">
+                    <img src="../images/tg aboutus.svg" alt="Ссылка на наш Telegram">
+                    <span>Telegram</span>
+                </a>
+        
+                <a href="https://vk.com/blissbloom" target="_blank" class="social-link">
+                    <img src="../images/vk aboutus.svg" alt="Ссылка на наш VK">
+                    <span>VK</span>
+                </a>
+                </div>
+            </div>
+        
+            <!-- Правый блок с картой -->
+            <div class="contact-map">
+                <img src="../images/о нас карта.png" alt="Карта - расположение нашего магазина">
+            </div>
+        </div>
+    </div>
+  
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="footer-left">
+            <div class="copyright">(с) 2017–2025 BLISS BLOOM</div>
+            <div class="policy">Политика конфиденциальности</div>
+            <div class="rights">Все права защищены.</div>
+        </div>
+      
+        <div class="footer-right">
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+            <div class="email">blissbloom@mail.ru</div>
+            <div class="socials">
+                <a href="https://t.me/sloborzhakka" class="social-icon">
+                    <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+                </a>
+                <a href="https://vk.com/blissbloom" class="social-icon">
+                    <img src="../images/vk.svg" alt="VK" width="35" height="35">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Модальное окно для первого блока главной страницы-->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+          <button class="modal-close" id="modalClose">✕</button>
+          <h3 class="modal-title">Записаться</h3>
+          <p class="modal-subtitle">*заполните форму и наш менеджер свяжется с вами в течение 10-15 минут для уточнения подробностей</p>
+          <form class="modal-form" id="modalForm">
+              <div class="input-field">
+                  <input type="text" placeholder="Имя" required>
+              </div>
+              <div class="input-field">
+                  <input type="tel" placeholder="Телефон (8 XXX XXX-XX-XX)" pattern="^(?:\+7|8)\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" required>
+              </div>
+              <div class="input-field">
+                  <input type="email" name="email" placeholder="Почта" required>
+              </div>
+              <div class="input-field">
+                <input type="date" id="dateInput" placeholder="Дата записи" required>
+              </div>
+              <div class="input-field">
+                  <select name="service" required>
+                      <option value="" disabled selected>Выберите услугу</option>
+                      <option value="peace">Цветение душевного покоя</option>
+                      <option value="east">Тайна Востока</option>
+                      <option value="ocean">Океанская гармония</option>
+                      <option value="silk">Шелковое восстановление</option>
+                  </select>
+              </div>
+              <div class="input-field">
+                  <select name="contact-method" required>
+                      <option value="" disabled selected>Как с Вами связаться</option>
+                      <option value="email">По почте</option>
+                      <option value="phone">По номеру телефона</option>
+                      <option value="telegram">В Телеграме</option>
+                      <option value="vk">В ВК</option>
+                      <option value="whatsapp">В WhatsApp</option>
+                  </select>
+              </div>
+              <button type="submit" class="modal-submit" id="modalSubmit">Отправить</button>
+          </form>
+      </div>
+    </div>
+</body>
+</html>        

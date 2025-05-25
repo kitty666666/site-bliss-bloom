@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script src="../js/modal.js"></script>
+    <script src="../js/modal-opryslyga.js"></script>
+    <script src="../js/mobile.js"></script>
+</head>
+
+<body>
+    <!-- Хэдер -->
+    <header class="container header-flex">
+         <!-- Бургер (только для мобилки) -->
+         <button class="burger" aria-label="Меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <!-- Мобильное меню только для мобилки -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <button class="close-btn" aria-label="Закрыть меню">×</button>
+            <ul class="mobile-menu-list">
+                <li><a href="../html/index.html">Главная</a></li>
+                <li><a href="../html/services.html">Услуги</a></li>
+                <li><a href="../html/masters.html">Мастера</a></li>
+                <li><a href="../html/sertificate.html">Сертификаты</a></li>
+                <li><a href="../html/gallery.html">Галерея</a></li>
+                <li><a href="../html/aboutus.html">О нас</a></li>
+                <li><a href="../html/otziv.html">Отзывы</a></li>
+            </ul>            
+            <div class="mobile-contacts">
+                <a href="tel:+79147313141" class="phone-mobile">+7 914 731-31-41</a>
+                <p class="email">blissbloom@mail.ru</p>
+            </div>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- только для десктопа -->         
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.svg" alt="Логотип Bliss Bloom" width="54.47" height="56">
+            </a>
+            <nav aria-label="Основная навигация">
+                <ul>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="masters.html">Мастера</a></li>
+                    <li><a href="sertificate.html">Сертификаты</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="aboutus.html">О нас</a></li>
+                    <li><a href="otziv.html">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <a href="https://t.me/sloborzhakka" class="social-icon">
+                <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+            </a>
+            <a href="https://vk.com/blissbloom" class="social-icon">
+                <img src="../images/vk.svg" alt="VK" width="35" height="35">
+            </a>
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+        </div>
+    </header>
+
+    <!-- 1 блок -->    
+    <section class="services-hero">
+        <img src="../images/услуги главное фото.png" alt="Интерьер зоны отдыха с бассейном" class="services-hero-image">
+    
+        <div class="services-hero-content">
+            <h1 class="services-hero-title">Услуги</h1>
+            <p class="services-hero-subtitle">
+                Наши процедуры созданы, чтобы дарить отдых, облегчение и восстановление. Продуманные ритуалы с использованием натуральных средств помогают телу расслабиться, а сознанию — отпустить напряжение.
+            </p>
+            <div class="services-hero-buttons">
+                <button class="hero-button register-btn">Записаться</button>
+                <a href="sertificate.html" class="hero-button gift-btn">Купить сертификат</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 2 блок --> 
+    <!-- Блок с услугой -->
+    <section class="service-detail">
+        <h2 class="service-detail-title">Спа — массаж</h2>
+        <p class="service-detail-description">
+            Сочетание различных техник массажа направлено на&nbsp;расслабление, улучшение циркуляции крови и снятие мышечного напряжения.
+        </p>
+
+        <div class="service-cards-container">
+            <!-- Левый блок -->
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="../images/услуги цветение.png" alt="Процедура Цветение душевного покоя" width="700" height="406">
+                </div>
+                <div class="service-card-content">
+                    <p class="service-card-title">Название</p>
+                    <p class="service-card-subtitle">Цветение душевного покоя</p>
+                </div>
+                <div class="service-card-description">
+                    <p class="description-title">Описание</p>
+                    <p class="description-text">Ритуал расслабления, который помогает снять напряжение, восстановить внутренний баланс и наполнить тело лёгкостью. Вы погрузитесь в атмосферу&nbsp;безмятежности и гармонии с нашим успокаивающим массажем.</p>
+                </div>
+                <div class="service-included">
+                    <p class="included-title">Что входит:</p>
+                    <ul class="included-list">
+                        <li>Расслабляющий массаж с тёплыми маслами</li>
+                        <li>Ароматерапия с цветочными композициями</li>
+                        <li>Мягкий пилинг для восстановления сияния кожи</li>
+                        <li>Тепловое укутывание и отдых под звуки природы</li>
+                        <li>Травяной сбор для завершения ритуала</li>
+                    </ul>
+                </div>
+                <div class="service-price">
+                    <p class="price-title">Цена</p>
+                    <p class="price">4,000 ₽</p>
+                </div>
+                <div class="service-duration">
+                    <p class="duration-title">Продолжительность</p>
+                    <p class="duration">2 часа</p>
+                </div>
+                <div class="service-button">
+                    <button class="service-book-btn">Записаться</button>
+                </div>
+            </div>
+        
+            <!-- Правый блок -->
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="../images/услуги тайна востока.png" alt="Процедура Тайна Востока" width="700" height="406">
+                </div>
+                <div class="service-card-content">
+                    <p class="service-card-title">Название</p>
+                    <p class="service-card-subtitle">Тайна Востока</p>
+                </div>
+                <div class="service-card-description">
+                    <p class="description-title">Описание</p>
+                    <p class="description-text">
+                        Древняя техника тайского массажа, которая сочетает в себе растяжку и давление на определённые точки. Ритуал восстанавливает энергетический баланс, улучшает гибкость, успокаивает и снимает напряжение с мышц.
+                    </p>
+                </div>
+                <div class="service-included">
+                    <p class="included-title">Что входит:</p>
+                    <ul class="included-list">
+                        <li>Тайский массаж на татами с техниками растяжки</li>
+                        <li>Воздействие на биоактивные точки для стимуляции энергии</li>
+                        <li>Ритуал очищения с горячими полотнами</li>
+                        <li>Ароматерапия с маслами и благовониями Востока</li>
+                    </ul>
+                </div>
+                <div class="service-price">
+                    <p class="price-title">Цена</p>
+                    <p class="price">5,000 ₽</p>
+                </div>
+                <div class="service-duration">
+                    <p class="duration-title">Продолжительность</p>
+                    <p class="duration">2 часа</p>
+                </div>
+                <div class="service-button">
+                    <button class="service-book-btn">Записаться</button>
+                </div>
+            </div>
+        </div>        
+    </section>
+    
+    <!-- 3 блок --> 
+    <!-- Блок с услугой -->
+    <section class="service-detail">
+        <h3 class="service-detail-title">Спа — уход</h3>
+        <p class="service-detail-description">
+            Комплекс процедур, направленных на глубокое восстановление и питание вашей кожи.
+        </p>
+
+        <div class="service-cards-container">
+            <!-- Левый блок -->
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="../images/услуги окен гармония.png" alt="Процедура Океанская гармония" width="700" height="406">
+                </div>
+                <div class="service-card-content">
+                    <p class="service-card-title">Название</p>
+                    <p class="service-card-subtitle">Океанская гармония</p>
+                </div>
+                <div class="service-card-description">
+                    <p class="description-title">Описание</p>
+                    <p class="description-text">
+                        Обёртывание ламинарией, которое насыщает кожу минералами, выводит токсины и восстанавливает её естественное сияние. Процедура расслабляет мышцы, улучшает циркуляцию и дарит чувство лёгкости в организме.
+                </div>
+                <div class="service-included">
+                    <p class="included-title">Что входит:</p>
+                    <ul class="included-list">
+                        <li>Обёртывание с ламинарией для детокса, увлажнения </li>
+                        <li>Лимфодренажный массаж для стимуляции кровообращения</li>
+                        <li>Пилинг с морской солью и эфирными маслами</li>
+                        <li>Маска с водорослями и минералами</li>
+                    </ul>
+                </div>
+                <div class="service-price">
+                    <p class="price-title">Цена</p>
+                    <p class="price">7,500 ₽</p>
+                </div>
+                <div class="service-duration">
+                    <p class="duration-title">Продолжительность</p>
+                    <p class="duration">2.5 часа</p>
+                </div>
+                <div class="service-button">
+                    <button class="service-book-btn">Записаться</button>
+                </div>
+            </div>
+
+            <!-- Правый блок -->
+            <div class="service-card">
+                <div class="service-card-image">
+                    <img src="../images/услуги шелковое вост.png" alt="Процедура Шелковое восстановление" width="700" height="406">
+                </div>
+                <div class="service-card-content">
+                    <p class="service-card-title">Название</p>
+                    <p class="service-card-subtitle">Шелковое восстановление</p>
+                </div>
+                <div class="service-card-description">
+                    <p class="description-title">Описание</p>
+                    <p class="description-text">
+                        Уход для сухой и чувствительной кожи, направленный на глубокое питание и увлажнение. Эта процедура подходит для восстановления кожи после стресса, обезвоживания, воздействия погодных условий или в процессе борьбы с раздражениями.
+                    </p>
+                </div>
+                <div class="service-included">
+                    <p class="included-title">Что входит:</p>
+                    <ul class="included-list">
+                        <li>Мягкий пилинг на основе миндальной пудры</li>
+                        <li>Обёртывание с маслом ши и экстрактом ванили</li>
+                        <li>Расслабляющий массаж с шёлковым кремом</li>
+                        <li>Уход для лица на базе гиалуроновой кислоты</li>
+                        <li>Чашка тёплого молока с мёдом после процедуры</li>
+                    </ul>
+                </div>
+                <div class="service-price">
+                    <p class="price-title">Цена</p>
+                    <p class="price">3,500 ₽</p>
+                </div>
+                <div class="service-duration">
+                    <p class="duration-title">Продолжительность</p>
+                    <p class="duration">1.5 часа</p>
+                </div>
+                <div class="service-button">
+                    <button class="service-book-btn">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="footer-left">
+            <div class="copyright">(с) 2017–2025 BLISS BLOOM</div>
+            <div class="policy">Политика конфиденциальности</div>
+            <div class="rights">Все права защищены.</div>
+        </div>
+      
+        <div class="footer-right">
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+            <div class="email">blissbloom@mail.ru</div>
+            <div class="socials">
+                <a href="https://t.me/sloborzhakka" class="social-icon">
+                    <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+                </a>
+                <a href="https://vk.com/blissbloom" class="social-icon">
+                    <img src="../images/vk.svg" alt="VK" width="35" height="35">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для первого блока главной страницы-->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+          <button class="modal-close" id="modalClose">✕</button>
+          <h3 class="modal-title">Записаться</h3>
+          <p class="modal-subtitle">*заполните форму и наш менеджер свяжется с вами в течение 10-15 минут для уточнения подробностей</p>
+          <form class="modal-form" id="modalForm">
+              <div class="input-field">
+                  <input type="text" placeholder="Имя" required>
+              </div>
+              <div class="input-field">
+                  <input type="tel" placeholder="Телефон (8 XXX XXX-XX-XX)" pattern="^(?:\+7|8)\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" required>
+              </div>
+              <div class="input-field">
+                  <input type="email" name="email" placeholder="Почта" required>
+              </div>
+              <div class="input-field">
+                <input type="date" id="dateInput" placeholder="Дата записи" required>
+              </div>
+              <div class="input-field">
+                  <select name="service" required>
+                      <option value="" disabled selected>Выберите услугу</option>
+                      <option value="peace">Цветение душевного покоя</option>
+                      <option value="east">Тайна Востока</option>
+                      <option value="ocean">Океанская гармония</option>
+                      <option value="silk">Шелковое восстановление</option>
+                  </select>
+              </div>
+              <div class="input-field">
+                  <select name="contact-method" required>
+                      <option value="" disabled selected>Как с Вами связаться</option>
+                      <option value="email">По почте</option>
+                      <option value="phone">По номеру телефона</option>
+                      <option value="telegram">В Телеграме</option>
+                      <option value="vk">В ВК</option>
+                      <option value="whatsapp">В WhatsApp</option>
+                  </select>
+              </div>
+              <button type="submit" class="modal-submit" id="modalSubmit">Отправить</button>
+          </form>
+      </div>
+    </div>
+
+
+    <!-- Модальное окно для блоков с услугами -->
+    <div class="modal-overlay" id="modalOverlayService">
+        <div class="modal">
+        <button class="modal-close" id="modalCloseService">✕</button>
+        <h3 class="modal-title">Записаться</h3>
+        <p class="modal-subtitle">
+            *заполните форму и наш менеджер свяжется с вами в течение 10-15 минут для уточнения подробностей
+        </p>
+    
+        <!-- Блок с услугой -->
+        <div class="modal-service-row">
+            <span class="modal-service-label">Услуга:</span>
+            <span class="modal-service-name" id="modalServiceName">Название услуги</span>
+        </div>
+    
+        <form class="modal-form" id="modalFormService">
+            <div class="input-field">
+            <input type="text" placeholder="Имя" required>
+            </div>
+            <div class="input-field">
+            <input type="tel" placeholder="Телефон (8 XXX XXX-XX-XX)" pattern="^(?:\+7|8)\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" required>
+            </div>
+            <div class="input-field">
+            <input type="email" name="email" placeholder="Почта" required>
+            </div>
+            <div class="input-field">
+            <input type="date" id="dateInputService" placeholder="Дата записи" required>
+            </div>
+            <div class="input-field">
+            <select name="contact-method" required>
+                <option value="" disabled selected>Как с Вами связаться</option>
+                <option value="email">По почте</option>
+                <option value="phone">По номеру телефона</option>
+                <option value="telegram">В Телеграме</option>
+                <option value="vk">В ВК</option>
+                <option value="whatsapp">В WhatsApp</option>
+            </select>
+            </div>
+            <button type="submit" class="modal-submit" id="modalSubmitService">Отправить</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

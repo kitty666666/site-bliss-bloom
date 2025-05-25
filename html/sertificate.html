@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сертификаты</title>
+    <link rel="stylesheet" href="../css/certificate.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/modal-certificate.css">
+    <link rel="stylesheet" href="../css/order-modal.css"> 
+    <script src="../js/modal.js"></script>
+    <script src="../js/modal-certificate.js"></script>
+    <script src="../js/modal-electro.js"></script>  
+    <script src="../js/modal-paper.js"></script>
+    <script src="../js/mobile.js"></script>
+
+</head>
+
+<body>
+    <!-- Хэдер -->
+    <header class="container header-flex">
+        <!-- Бургер (только для мобилки) -->
+        <button class="burger" aria-label="Меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <!-- Мобильное меню только для мобилки -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <button class="close-btn" aria-label="Закрыть меню">×</button>
+            <ul class="mobile-menu-list">
+                <li><a href="../html/index.html">Главная</a></li>
+                <li><a href="../html/services.html">Услуги</a></li>
+                <li><a href="../html/masters.html">Мастера</a></li>
+                <li><a href="../html/sertificate.html">Сертификаты</a></li>
+                <li><a href="../html/gallery.html">Галерея</a></li>
+                <li><a href="../html/aboutus.html">О нас</a></li>
+                <li><a href="../html/otziv.html">Отзывы</a></li>
+            </ul>            
+            <div class="mobile-contacts">
+                <a href="tel:+79147313141" class="phone-mobile">+7 914 731-31-41</a>
+                <p class="email">blissbloom@mail.ru</p>
+            </div>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- только для десктопа --> 
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <img src="../images/logo.svg" alt="Логотип Bliss Bloom" width="54.47" height="56">
+            </a>
+            <nav aria-label="Основная навигация">
+                <ul>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="masters.html">Мастера</a></li>
+                    <li><a href="sertificate.html">Сертификаты</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="aboutus.html">О нас</a></li>
+                    <li><a href="otziv.html">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <a href="https://t.me/sloborzhakka" class="social-icon">
+                <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+            </a>
+            <a href="https://vk.com/blissbloom" class="social-icon">
+                <img src="../images/vk.svg" alt="VK" width="35" height="35">
+            </a>
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+        </div>
+    </header>
+
+    <!-- 1 блок -->    
+    <section class="sertificate-hero">
+        <img src="../images/мастера главное.png" alt="Интерьер процедурного кабинета" class="sertificate-hero-image">
+    
+        <div class="sertificate-hero-content">
+            <h1 class="sertificate-hero-title">Сертификаты</h1>
+            <p class="sertificate-hero-subtitle">
+                Подарочный сертификат — это изысканный способ подарить заботу, отдых и гармонию. Выберите номинал, и мы оформим сертификат в элегантной упаковке, подходящей для любого случая.
+            </p>
+            <div class="sertificate-hero-buttons">
+                <button class="hero-button register-btn">Записаться</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 2 блок заказать сертификат-->      
+    <section class="certificate-order">
+        <h2 class="certificate-title">Заказать сертификат на сумму</h2>
+        <p class="certificate-subtitle">Минимальная сумма сертификата — 2,000 ₽</p>
+      
+        <div class="certificate-options">
+          <div class="certificate-option">2,000 ₽</div>
+          <div class="certificate-option">4,000 ₽</div>
+          <div class="certificate-option">6,000 ₽</div>
+          <div class="certificate-option">8,000 ₽</div>
+          <div class="certificate-option">10,000 ₽</div>
+        </div>
+      
+        <button class="certificate-button">Заказать</button>
+      
+        <p class="certificate-note">
+          *для заказа сертификата на другую сумму или уточнения деталей свяжитесь с нами в telegram/VK или звоните по телефону +7 934 510-31-64
+        </p>
+    </section>
+      
+    <!-- 3 блок – 2 вида оформления -->
+    <section class="certificate-types">
+        <h3 class="types-title">2 вида оформления</h3>
+    
+        <div class="types-wrapper">
+            <!-- Левая карточка -->
+            <div class="type-card">
+                <img src="../images/серт бумажный вариант.png" alt="Бумажный вариант сертификата" class="type-image">
+                <div class="type-name">Бумажный вариант</div>
+                <div class="type-description">подарочная карта/фирменный конверт</div>
+                <button class="type-button" data-type="paper">Заказать</button>
+            </div>
+        
+            <!-- Правая карточка -->
+            <div class="type-card">
+                <img src="../images/серт электронный вариант.png" alt="Электронный вариант сертификата" class="type-image">
+                <div class="type-name">Электронный вариант</div>
+                <div class="type-description">фирменный бланк с приглашением (отправка в telegram/VK/на почту)</div>
+                <button class="type-button" data-type="digital">Заказать</button>
+            </div>
+        </div>
+    </section>
+  
+    <!-- 4 блок — Условия действия сертификата -->
+    <section class="certificate-terms">
+        <h4 class="terms-title">Условия действия сертификата</h4>
+        <div class="terms-text">
+            <p>1. Подарочный сертификат в СПА-салон действителен в течение 6 (шести) месяцев с даты покупки;</p>
+            <p>2. Подарочный сертификат не подлежит возврату и обмену на денежные средства;</p>
+            <p>3. При реализации подарочного сертификата общей стоимостью ниже его номинала разница в денежном эквиваленте не компенсируется;</p>
+            <p>4. При выборе услуги на сумму, большую номинала, владелец сертификата должен доплатить разницу;</p>
+            <p>5. Действие подарочного сертификата не распространяется на приобретение средств для домашнего ухода в салоне;</p>
+            <p>6. Бронирование времени для прохождения процедур по подарочному сертификату происходит по предварительной записи (на будни за 2−3 дня, на выходные за 1−2 недели) по контактным телефонам салона;</p>
+            <p>7. Действие сертификата не распространяется на услуги по акциям и скидкам;</p>
+            <p>8. Если по каким‑то причинам вы не можете посетить салон в забронированное по подарочному сертификату время, мы просим отменить визит не менее чем за 24 часа.</p>
+        </div>
+    </section>
+  
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="footer-left">
+            <div class="copyright">(с) 2017–2025 BLISS BLOOM</div>
+            <div class="policy">Политика конфиденциальности</div>
+            <div class="rights">Все права защищены.</div>
+        </div>
+      
+        <div class="footer-right">
+            <a href="tel:+79147313141" class="phone">+7 914 731-31-41</a>
+            <div class="email">blissbloom@mail.ru</div>
+            <div class="socials">
+                <a href="https://t.me/sloborzhakka" class="social-icon">
+                    <img src="../images/tg.svg" alt="Telegram" width="35" height="35">
+                </a>
+                <a href="https://vk.com/blissbloom" class="social-icon">
+                    <img src="../images/vk.svg" alt="VK" width="35" height="35">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для первого блока главной страницы-->
+    <div class="modal-overlay" id="modalOverlay" style="display:none;">
+      <div class="modal">
+          <button class="modal-close" id="modalClose">✕</button>
+          <h3 class="modal-title">Записаться</h3>
+          <p class="modal-subtitle">*заполните форму и наш менеджер свяжется с вами в течение 10-15 минут для уточнения подробностей</p>
+          <form class="modal-form" id="modalForm">
+              <div class="input-field">
+                  <input type="text" placeholder="Имя" required>
+              </div>
+              <div class="input-field">
+                  <input type="tel" placeholder="Телефон(8 XXX XXX-XX-XX)" pattern="^(?:\+7|8)\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" required>
+              </div>
+              <div class="input-field">
+                  <input type="email" name="email" placeholder="Почта" required>
+              </div>
+              <div class="input-field">
+                <input type="date" id="dateInput" placeholder="Дата записи" required>
+              </div>
+              <div class="input-field">
+                  <select name="service" required>
+                      <option value="" disabled selected>Выберите услугу</option>
+                      <option value="peace">Цветение душевного покоя</option>
+                      <option value="east">Тайна Востока</option>
+                      <option value="ocean">Океанская гармония</option>
+                      <option value="silk">Шелковое восстановление</option>
+                  </select>
+              </div>
+              <div class="input-field">
+                  <select name="contact-method" required>
+                      <option value="" disabled selected>Как с Вами связаться</option>
+                      <option value="email">По почте</option>
+                      <option value="phone">По номеру телефона</option>
+                      <option value="telegram">В Телеграме</option>
+                      <option value="vk">В ВК</option>
+                      <option value="whatsapp">В WhatsApp</option>
+                  </select>
+              </div>
+              <button type="submit" class="modal-submit" id="modalSubmit">Отправить</button>
+          </form>
+      </div>
+    </div>
+
+    <!-- Новое модальное окно для заказа сертификата -->
+    <div class="modal-certificate-overlay" id="modalCertificateOrder" style="display:none;">
+        <div class="modal-certificate">
+        <button class="modal-certificate-close" id="modalCertificateClose">✕</button>
+        <h3 class="modal-certificate-title">Заказать сертификат</h3>
+    
+        <form class="modal-certificate-form" id="certificateOrderForm">
+            <select name="format" required>
+                <option value="" disabled selected>Выберите вариант оформления</option>
+                <option value="paper">Бумажный сертификат</option>
+                <option value="electronic">Электронный сертификат</option>
+            </select>
+    
+            <select name="payment" required>
+                <option value="" disabled selected>Выберите способ оплаты</option>
+                <option value="on-delivery">Оплата при получении</option>
+                <option value="online">Оплата онлайн</option>
+            </select>
+    
+            <input type="email" name="email" placeholder="Почта" required>
+    
+            <div class="modal-certificate-total">
+            <div>ИТОГО:</div>
+            <div id="certificateTotal"></div>
+            </div>
+    
+            <button type="submit" class="modal-certificate-submit">Заказать</button>
+            <div class="modal-certificate-info">
+                *для дальнейшей оплаты отправим вам письмо на почту
+            </div>
+        </form>
+        </div>
+    </div>
+
+   <!-- Модальное окно Бумажный сертификат -->
+    <div id="orderModalPaper" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+        <button class="modal-close" id="modalClosePaper">✕</button>
+        <h2>Заказать сертификат</h2>
+    
+        <form id="orderFormPaper" novalidate>
+            <div class="selected-type-row">
+            <div class="selected-label">Вы выбрали:</div>
+            <div class="selected-type-name">Бумажный вариант</div>
+            </div>
+    
+            <select name="sumSelect" required>
+            <option value="" disabled selected>Выберите сумму сертификата</option>
+            <option value="2000">2,000 ₽</option>
+            <option value="4000">4,000 ₽</option>
+            <option value="6000">6,000 ₽</option>
+            <option value="8000">8,000 ₽</option>
+            <option value="10000">10,000 ₽</option>
+            </select>
+    
+            <p class="order-info-text">
+            *для заказа сертификата на другую сумму или уточнения&nbsp;деталей&nbsp;свяжитесь&nbsp;с&nbsp;нами&nbsp;в&nbsp;telegram/ VK&nbsp;или звоните по телефону +7 934 510-31-64
+            </p>
+    
+            <select name="packagingSelect" required>
+            <option value="" disabled selected>Выберите вариант оформления</option>
+            <option value="Подарочная карта">Подарочная карта</option>
+            <option value="Фирменный конверт">Фирменный конверт</option>
+            </select>
+    
+            <select name="paymentSelect" required>
+            <option value="" disabled selected>Выберите способ оплаты</option>
+            <option value="Оплата при получении">Оплата при получении</option>
+            <option value="Оплата онлайн">Оплата онлайн</option>
+            </select>
+    
+            <input type="email" name="emailInput" placeholder="Почта" required>
+    
+            <button type="submit" class="type-button-order">Заказать</button>
+        </form>
+    
+        <div class="modal-certificate-info">
+            *для дальнейшей оплаты отправим вам письмо на почту
+        </div>
+        </div>
+    </div>
+  
+
+    <!-- Модальное окно Электронный сертификат -->
+    <div id="orderModalDigital" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+        <button class="modal-close" id="modalCloseDigital">✕</button>
+        <h2>Заказать сертификат</h2>
+    
+        <form id="orderFormDigital" novalidate>
+            <div class="selected-type-row">
+            <div class="selected-label">Вы выбрали:</div>
+            <div class="selected-type-name">Электронный вариант</div>
+            </div>
+    
+            <select name="sumSelect" required>
+            <option value="" disabled selected>Выберите сумму сертификата</option>
+            <option value="2000">2,000 ₽</option>
+            <option value="4000">4,000 ₽</option>
+            <option value="6000">6,000 ₽</option>
+            <option value="8000">8,000 ₽</option>
+            <option value="10000">10,000 ₽</option>
+            </select>
+    
+            <p class="order-info-text">
+                *для заказа сертификата на другую сумму или уточнения&nbsp;деталей&nbsp;свяжитесь&nbsp;с&nbsp;нами&nbsp;в&nbsp;telegram/ VK&nbsp;или звоните по телефону +7 934 510-31-64
+            </p>
+    
+            <!-- Электронный сертификат, скорее всего, не требует упаковки -->
+            <select name="deliverySelect" required>
+            <option value="" disabled selected>Выберите способ отправки</option>
+            <option value="По почте">По почте</option>
+            <option value="В Ватсап">В Ватсап</option>
+            <option value="В Телеграм">В Телеграм</option>
+            </select>
+    
+            <select name="paymentSelect" required>
+            <option value="" disabled selected>Выберите способ оплаты</option>
+            <option value="Оплата при получении">Оплата при получении</option>            
+            <option value="Оплата онлайн">Оплата онлайн</option>
+            </select>
+    
+            <input type="email" name="emailInput" placeholder="Почта" required>
+    
+            <button type="submit" class="type-button-order">Заказать</button>
+        </form>
+    
+        <div class="modal-certificate-info">
+            *для дальнейшей оплаты отправим вам письмо на почту
+        </div>
+        </div>
+    </div>
+    
+
+  
+  
+</body>
+</html>    

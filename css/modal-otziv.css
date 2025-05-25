@@ -1,0 +1,266 @@
+/* Модальное окно отзывов */
+.review-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-modal {
+  position: relative;
+  width: 700px;
+  height: 650px;
+  background-color: #F5F1EC;
+  border-radius: 20px;
+  padding: 30px 0 0;
+  text-align: center;
+  border: 1px solid #465036;
+}
+
+.review-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.review-modal-title {
+  font-size: 60px;
+  color: #465036;
+  margin-bottom: 20px;
+  font-family: 'Involve', sans-serif;
+}
+
+.review-modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Поля ввода */
+.review-input-field {
+  width: 500px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.review-input-field.first-field {
+  margin-top: 0;
+}
+
+.review-input-field.textarea-field {
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
+
+/* Стили для полей ввода */
+.review-input-field input,
+.review-input-field select,
+.review-input-field textarea {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: 'Involve', sans-serif;
+}
+
+/* Текст в заполненных полях */
+.review-input-field input:not(:placeholder-shown),
+.review-input-field select:valid,
+.review-input-field textarea:not(:placeholder-shown) {
+  color: #333333;
+}
+
+/* Плейсхолдеры и невыбранные значения */
+.review-input-field input::placeholder,
+.review-input-field select:invalid,
+.review-input-field textarea::placeholder {
+  color: #808080 !important;
+}
+
+/* Стили для input и select */
+.review-input-field input,
+.review-input-field select {
+  height: 50px;
+  border-radius: 40px;
+  padding: 0 31px;
+  line-height: 50px;
+  color: #808080; /* Цвет по умолчанию для не заполненных полей */
+}
+
+/* Стиль для textarea */
+.review-input-field textarea {
+  height: 150px;
+  border-radius: 20px;
+  padding: 15px 0px 0px 31px;
+  resize: none;
+  color: #808080; /* Цвет по умолчанию для не заполненных полей */
+}
+
+/* Кастомизация select (удаление стандартной стрелки) */
+.review-input-field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Иконка календаря */
+.review-input-field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+/* Кнопка отправки */
+.review-modal-submit {
+  width: 500px;
+  height: 50px;
+  background-color: #465036;
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'Involve', sans-serif;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.review-modal-submit:hover {
+  background-color: #FFFFFF;
+  color: #465036;
+  border: 1px solid #333333;
+}
+
+/* Текст под кнопкой */
+.review-modal-note {
+  font-family: 'Involve', sans-serif;
+  font-size: 18px;
+  color: #333333;
+  text-align: center;
+}
+
+/* Исправление цвета placeholder для поля даты */
+.review-input-field input[type="date"]:not(:valid),
+.review-input-field input[type="date"]:invalid {
+  color: #808080 !important;
+}
+
+.review-input-field input[type="date"]:valid,
+.review-input-field input[type="date"]:not(:placeholder-shown) {
+  color: #333333;
+}
+
+/* Дополнительно для браузеров, которые не поддерживают :placeholder-shown */
+.review-input-field input[type="date"]::-webkit-datetime-edit {
+  color: #808080;
+}
+
+.review-input-field input[type="date"]:valid::-webkit-datetime-edit {
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .review-modal {
+    width: 345px;
+    height: 533px;
+    padding-top: 20px;
+    border-radius: 20px;
+  }
+
+  .review-modal-close {
+    width: 15.2px;
+    height: 15.2px;
+    font-size: 16px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .review-modal-title {
+    font-size: 30px;
+  }
+
+  /* Поля ввода */
+  .review-input-field {
+    width: 314px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .review-input-field.textarea-field {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  /* Стили для полей ввода */
+  .review-input-field input,
+  .review-input-field select {
+    width: 314px;
+    height: 41px;
+    background-color: #FFFFFF;
+    border: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Involve', sans-serif;
+  }
+
+  .review-input-field textarea{
+    width: 314px;
+    height: 153px;
+    background-color: #FFFFFF;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Involve', sans-serif;
+  }
+
+  /* Стили для input и select */
+  .review-input-field input,
+  .review-input-field select {
+    height: 41px;
+    border-radius: 40px;
+    padding: 0 31px;
+    line-height: 41px;
+    color: #808080; /* Цвет по умолчанию для не заполненных полей */
+  }
+
+  .review-modal-submit {
+    width: 314px;
+    height: 41px;
+    background-color: #465036;
+    color: #FFFFFF;
+    font-size: 14px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Involve', sans-serif;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Текст под кнопкой */
+  .review-modal-note {
+    font-family: 'Involve', sans-serif;
+    width: 193px;
+    height: 32px;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+  }
+}

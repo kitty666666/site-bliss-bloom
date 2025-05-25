@@ -1,0 +1,1341 @@
+@font-face {
+    font-family: 'ActayWide';
+    src: url('../fonts/ActayWide-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0; /* Отключает внешние отступы у всех элементов */
+    padding: 0; /* То же самое, но для внутренних отступов */
+    box-sizing: border-box; /* Говорит браузеру считать padding и border внутрь ширины и высоты элемента */
+}
+
+.container {
+    max-width: 1440px; /* Основной контент сосредоточен на 1440px */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: 'Involve', sans-serif;
+    background-color: #F5F1EC; /* Светлый фон */
+    color: #465036; /* Тёмно-зелёный цвет текста */
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ----------- 1 БЛОК ----------- */
+
+header {
+    position: fixed;         /* фиксируем хэдер */
+    top: 0;                  /* прижимаем его к верхней части окна */
+    width: 100%;             /* на всю ширину экрана */
+    z-index: 999;            /* чтобы был поверх всего остального */
+
+    background-color: #465036;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* Выравнивание логотипа и меню по вертикали */
+    gap: 50px; /* Отступ между логотипом и меню */
+}
+
+.logo img {
+    width: 40px;
+    height: 42px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 56px; /* Отступы между пунктами навигации 56px */
+}
+
+nav ul li a {
+    color: #F5F1EC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Блок справа (иконки и номер телефона) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Отступы между иконками и номером 32px */
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.phone {
+    color: #F5F1EC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.phone:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 95px 0 25px;
+}
+
+.hero--info h1 {
+    font-family: 'ActayWide', sans-serif;
+    font-size: 191px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #465036;
+}
+
+.slogan-row {
+    display: flex;
+    justify-content: center;
+    gap: 530px;
+    margin-top: -35px;
+    padding: 20;
+    position: relative;
+}
+
+.slogan {
+    font-family: 'Involve', sans-serif;
+    font-size: 23px;
+    color: #465036;
+}
+
+.slogan.left {
+    position: absolute;
+    left: 20px;
+    text-align: left;
+}
+
+.slogan.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.slogan.right {
+    position: absolute;
+    right: 20px; /* Отступ 20 пикселей от правого края */
+    text-align: right;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px 20px;
+}
+
+.image-box {
+    position: relative; /* Для того, чтобы кнопка располагалась внутри этой области */
+}
+
+
+.image-box img {
+    width: 720px;
+    height: 504px;
+    border-radius: 30px;
+}
+
+.image-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 363px;
+    height: 67px; /* задаём точную высоту */
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Involve', sans-serif;
+    font-size: 23px;
+    text-align: center;
+    line-height: 67px; /* текст по центру по вертикали */
+    box-sizing: border-box;
+    white-space: nowrap;
+    padding: 0; /* убираем padding, используем height + line-height */
+    border: 1px solid transparent; /* прозрачная рамка по умолчанию */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+.register-btn {
+    background-color: #465036; 
+    color: #F5F1EC;
+}
+
+.register-btn:hover{
+    background-color: #FFFFFF;
+    color: #465036;
+    border-color: #333333;
+}
+
+.certificate-btn {
+    background-color: #F5F1EC; 
+    color: #465036;
+    border: 1px solid #465036; 
+}
+
+a.certificate-btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 67px; /* центрируем текст по вертикали */
+    text-decoration: none; /* убираем подчёркивание */
+}
+
+.certificate-btn:hover{
+    background-color: #465036;
+    border: none;
+    color:#FFFFFF;
+}
+
+/*----------- скрытие мобилки для десктопа ---------------*/
+@media (min-width: 769px) {
+    .burger,
+    .mobile-menu,
+    .overlay {
+      display: none !important;
+    }
+}
+  
+
+/* ----------- 2 БЛОК ----------- */
+
+.text-row {
+    padding: 160px 0 0; 
+    text-align: center;
+}
+
+.text-title {
+    font-family: 'Involve', sans-serif;
+    font-size: 60px; /* Меньший размер для заголовка */
+    color: #465036;
+    margin-bottom: 32px; /* Отступ снизу для заголовка */
+}
+
+.text-description {
+    font-family: 'Involve', sans-serif;
+    font-size: 23px; /* Размер текста для описания */
+    color: #465036;
+    line-height: 1.6; /* Межстрочный интервал для лучшего восприятия текста */
+    max-width: 1019px; /* Ограничим ширину для лучшей читаемости */
+    margin: 0 auto; /* Центрируем описание */
+}
+
+/* ----------- 3 БЛОК ----------- */
+
+.services-row {
+    display: flex;
+    justify-content: space-between; /* Размещение элементов по краям */
+    align-items: flex-end; /* Центрирование по вертикали */
+    padding: 165px 20px 20px; /* Отступ сверху 160px */
+}
+
+.services-title {
+    display: flex;
+    align-items: flex-end; /* Выравнивание по нижнему краю */
+}
+
+.services-title .services-text {
+    font-family: 'Involve', sans-serif;
+    font-size: 60px;
+    color: #465036;
+}
+
+.services-link .services-all {
+    font-family: 'Involve', sans-serif;
+    font-size: 16px;
+    color: #465036;
+    text-decoration: none;
+}
+
+.services-link .services-all:hover {
+    text-decoration: underline;
+}
+
+/* сами блоки с услугами */
+
+.card {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    width: calc(100% - 40px); /* 100% ширины минус отступы */
+    height: 766px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    margin: 0 20px 50px 20px; /* отступы слева и справа + снизу */
+}
+  
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.card-image.large {
+    width: 680px;
+    height: 461px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+  
+.card-image.small {
+    width: 680px;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+  
+.card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+  
+.service-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+
+.short-description {
+    display: none;
+}
+
+/* Добавление отступа для блока "Название" */
+.service-block:first-child {
+    margin-top: 23px; /* Устанавливаем отступ сверху только для блока "Название" */
+}
+  
+.block-label {
+    font-family: 'Involve', sans-serif;
+    font-size: 23px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+  
+.block-value {
+    font-family: 'Involve', sans-serif;
+    font-size: 23px;
+    color: #333333;
+}
+  
+.button-row {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.action-button {
+    width: 680px;
+    height: 67px;
+    border-radius: 40px;
+    font-family: 'Involve', sans-serif;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+}
+  
+/* Кнопка "Записаться" */
+.action-button.signup {
+    background-color: #465036;
+    color: #F5F1EC;
+    border: 1px solid transparent; /* прозрачная рамка по умолчанию */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+.action-button.signup:hover{
+    background-color: #FFFFFF;
+    color: #465036;
+    border-color: #333333;
+}
+
+/* Кнопка "Смотреть все" */
+.view-all-button {
+    margin-top: 56px; /* Отступ 56px от предыдущего блока */
+    text-align: center; /* Центрируем кнопку */
+    margin-bottom: 96px;
+}
+a.action-button.view-all {
+    display: inline-block;
+    text-align: center;
+    line-height: 67px; /* центрируем текст по вертикали */
+    text-decoration: none; /* убираем подчёркивание */
+}
+.action-button.view-all {
+    width: 700px; /* Ширина кнопки */
+    height: 67px; /* Высота кнопки */
+    background-color: #465036; /* Цвет фона кнопки */
+    color: #F5F1EC; /* Цвет текста */
+    border-radius: 40px; /* Скругленные углы */
+    font-family: 'Involve', sans-serif;
+    font-size: 23px; /* Размер шрифта */
+    cursor: pointer;
+    border: 1px solid transparent; /* прозрачная рамка по умолчанию */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+.action-button.view-all:hover{
+    background-color: #FFFFFF;
+    color: #465036;
+    border-color: #333333;
+}
+
+/* ----------- 4 БЛОК ----------- */
+
+/* Блок "Почему выбирают Bliss Bloom?" */
+.why-choose {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 793px;
+    margin: 0 auto;
+    padding: 220px 0 141px 0;
+    color: #FFFFFF;
+}
+
+.why-choose h4 {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 73px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.why-choose-content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px; /* 20px слева и справа */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Колонки */
+.why-choose-column {
+    width: 424px;
+    height: 225px;
+    text-align: center;
+    padding: 0 0px; /* Центрируем контент внутри колонки */
+    box-sizing: border-box;
+}
+
+.column-number {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 32px;
+}
+
+.column-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.column-description {
+    font-family: 'Involve', sans-serif;
+    font-weight: 400; /* Regular начертание */
+    font-size: 21px; 
+    line-height: 1.3; 
+    text-align: center;
+    width: 424px;
+    height: 93px;
+    margin: 0 auto;
+}
+
+/* Разделительные вертикальные полоски */
+.divider {
+    width: 1px;
+    height: 225px;
+    background-color: white;
+}
+
+/* ----------- 5 БЛОК ----------- */
+/* Блок Отзывы */
+
+.reviews {
+    padding-top: 100px; /* Отступ сверху для блока с отзывами */
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.reviews-header h5 {
+    font-size: 60px;
+    color: #465036; /* Цвет заголовка */
+    margin: 0; /* Убираем отступы вокруг заголовка */
+}
+
+.view-reviews {
+    font-size: 16px;
+    color: #465036;
+    text-decoration: none;
+}
+
+.view-reviews:hover {
+    text-decoration: underline;
+}
+
+.reviews-cards {
+    display: flex;
+    gap: 20px;           /* Расстояние между карточками */
+    padding: 0 20px;     /* Отступы от краёв страницы */
+    box-sizing: border-box;
+}
+
+.review-card {
+    width: 460px;
+    height: 501px;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.review-header {
+    width: 100%;
+    height: 189px;
+    background-color: #465036;
+    border-radius: 20px 20px 0 0;
+    padding: 32px 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.review-header p {
+    margin-bottom: 16px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.review-text {
+    padding: 32px 20px;
+    font-size: 23px;
+    color: #333333;
+    line-height: 1.3;
+}
+
+.review-text p {
+    margin-bottom: 16px;
+}
+
+/* ----------- 6 БЛОК ----------- */
+/* Призыв купить сертификат */
+
+.gift-section {
+    margin-top: 180px; /* Отступ от блока отзывов */
+}
+
+.gift-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.gift-title {
+    font-size: 60px;
+    margin: 0;
+    color: #465036;
+    text-align: left;
+    font-style: normal;
+}
+
+.gift-line-right {
+    width: 502px;
+    height: 67px;
+    object-fit: contain;
+}
+
+.gift-row-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+    padding: 0 20px;
+}
+
+.gift-line-left {
+    width: 435px;
+    height: 67px;
+    object-fit: contain;
+}
+
+.gift-subtitle {
+    font-size: 60px;
+    margin: 0;
+    color: #465036;
+    text-align: right;
+    font-style: normal;
+}
+
+.gift-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 68px;
+}
+
+.gift-button {
+    width: 700px;
+    height: 67px;
+    font-size: 23px;
+    background-color: #465036;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Involve', sans-serif; /* Шрифт Involve */
+    text-align: center;
+    border: 1px solid transparent; /* прозрачная рамка по умолчанию */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* плавность */
+}
+
+a.gift-button{
+    display: inline-block;
+    text-align: center;
+    line-height: 67px; /* центрируем текст по вертикали */
+    text-decoration: none; /* убираем подчёркивание */
+}
+
+.gift-button:hover{
+    background-color: #FFFFFF;
+    color: #465036;
+    border-color: #333333;
+}
+
+/* ----------- FOOTER ----------- */
+
+footer {
+    background-color: #465036;
+    width: 1440px;
+    height: 179px;
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 20px 0 20px;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: 'Involve', sans-serif;
+}
+
+/* Левая часть футера */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left .copyright {
+    margin-bottom: 16px;
+}
+
+.footer-left .policy {
+    margin-bottom: 16px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    width: fit-content;
+}
+
+.footer-left .rights {
+    margin: 0;
+}
+
+/* Правая часть футера */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -6px; /* чтобы телефон был на 32px от верха */
+}
+
+.footer-right .phone {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer-right .phone:hover{
+    text-decoration: underline;
+}
+
+.footer-right .email {
+    margin-bottom: 16px;
+}
+
+.footer-right .socials {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+}
+
+.footer-right .social-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+/* ===== Мобильные стили ===== */
+@media (max-width: 768px) { 
+    header {
+        position: fixed;         /* фиксируем хэдер */
+        top: 0; 
+        z-index: 999;  
+        width: 375px; /* Ограничиваем максимальную ширину */
+        height: 62px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #465036;
+    }
+
+    /* Скрываем ВСЁ, что не нужно в мобилке */
+    .header-left nav,
+    .header-left .logo,
+    .phone,
+    .footer,
+    .footer-left,
+    .footer-right {
+        display: none !important
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 375px;
+        height: 490px;
+        background-color: #F5F1EC;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.5); /* полупрозрачный белый */
+        z-index: 998; /* ниже, чем меню с 999 */
+    }
+    
+    
+    .close-btn {
+        position: absolute;
+        top: 43px;
+        right: 16px;
+        width: 21px;
+        height: 21px;
+        font-size: 40px;
+        line-height: 21px;
+        text-align: center;
+        color: #808080;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .mobile-menu-list {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-left: 16px;
+        list-style: none;
+        margin-top: 45px;
+    }
+    
+    .mobile-menu-list li {
+        font-family: 'InvolveBold', sans-serif;
+        margin-bottom: -30px;
+        display: block; /* важно, чтобы пункты шли в столбик */
+    }
+    
+    .mobile-menu-list li a {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #465036;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .mobile-contacts {
+        margin-top: 87px;
+        padding-left: 16px;
+        font-size: 13px;
+        color: #465036;
+    }
+
+    .mobile-contacts .phone-mobile {
+        margin-top: 0;
+        color: #465036;
+        text-decoration: none;
+    }
+    
+    .mobile-contacts .email {
+        margin-top: 10px;
+    }
+    
+    .no-scroll {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    /* Бургер-меню */
+    .burger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 15px; /* 3 линии по 2px + 2 промежутка по 6px */
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        display: block;
+        width: 29px;
+        height: 1.5px;
+        background: #F5F1EC;
+        transition: all 0.3s;
+    }
+
+    /* Иконки справа */
+    .header-right {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header-right .social-icon img {
+        width: 27px;
+        height: 27px;
+    }
+
+    /*--------- 1 блок -----------*/
+    .hero {
+        text-align: center;
+        padding-top: 70px; /* отступ от хедера */
+    }
+      
+    .hero h1 {
+        margin: 0;
+        line-height: 1; /* убираем лишнее пространство */
+    }
+      
+    .bliss {
+        display: block;
+        font-size: 115px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+      
+    .bloom {
+        display: block;
+        font-size: 89px;
+        line-height: 1;
+        margin-top: -10px; /* отступ от BLISS */
+        padding: 0;
+    }
+
+
+
+    .slogan-row {
+        display: flex;
+        justify-content: center;
+        gap: 530px;
+        margin-top: -15px;
+        padding: 20;
+        position: relative;
+    }
+    
+    .slogan {
+        font-family: 'Involve', sans-serif;
+        font-size: 14px;
+        color: #465036;
+    }
+    
+    .slogan.left {
+        position: absolute;
+        left: 16px;
+        text-align: left;
+    }
+    
+    .slogan.center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    .slogan.right {
+        position: absolute;
+        right: 15px; /* Отступ 20 пикселей от правого края */
+        text-align: right;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 16px;
+        padding: 5px 16px; /* немного меньше паддинг */
+    }
+    
+    .image-box img {
+        width: 344px;
+        border-radius: 20px;
+        height: auto;
+    }
+    
+    .image-box:first-child img {
+        height: 250px;
+    }
+    
+    .image-box:last-child img {
+        height: 190px;
+    }
+    
+    .image-btn {
+        position: absolute;
+        bottom: 12px;
+        left: 8px;
+        width: 328px;
+        height: 41px;
+        line-height: 41px;
+        font-size: 14px;
+        border-radius: 40px;
+    }
+
+    a.certificate-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: normal; /* сбрасываем прежнее */
+        text-decoration: none;
+        font-size: 14px;
+        height: 41px;
+    }
+
+    /* ----------- 2 БЛОК ----------- */
+
+    .text-row {
+        padding: 110px 0px 0px; 
+        text-align: center;
+    }
+
+    .text-title {
+        font-family: 'Involve', sans-serif;
+        font-size: 24px; /* Меньший размер для заголовка */
+        color: #465036;
+        margin-bottom: 15px; /* Отступ снизу для заголовка */
+    }
+
+    .text-description {
+        font-family: 'Involve', sans-serif;
+        font-size: 14px; /* Размер текста для описания */
+        color: #465036;
+        line-height: 1.4; /* Межстрочный интервал для лучшего восприятия текста */
+        width: 338px;
+        height: 114px; /* Ограничим ширину для лучшей читаемости */
+        margin: 0 auto; /* Центрируем описание */
+    }
+
+    /* ----------- 3 БЛОК ----------- */
+
+    .services-row {
+        display: flex;
+        justify-content: space-between; /* Размещение элементов по краям */
+        align-items: flex-end; /* Центрирование по вертикали */
+        padding: 110px 16px 15px; /* Отступ сверху 160px */
+    }
+
+    .services-title {
+        display: flex;
+        align-items: flex-end; /* Выравнивание по нижнему краю */
+    }
+
+    .services-title .services-text {
+        font-family: 'Involve', sans-serif;
+        font-size: 24px;
+        color: #465036;
+    }
+
+    .services-link .services-all {
+        font-family: 'Involve', sans-serif;
+        font-size: 12px;
+        color: #465036;
+        text-decoration: none;
+    }
+
+    .services-link .services-all:hover {
+        text-decoration: underline;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        width: 344px;
+        height: 548px;
+        padding: 0;
+        margin: 0 auto 20px auto; /* по центру, нижний отступ между карточками 32px */
+        border-radius: 20px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    
+    .card-left {
+        width: 100%;
+    }
+    
+    .card-image.large {
+        width: 320px;
+        height: 194px;
+        margin: 13px 12px 10px 12px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    
+    .card-image.small {
+        display: none;
+    }
+    
+    .card-right {
+        width: 100%;
+        padding: 0px 12px 0 12px;
+    }
+    
+    /* Отступ между блоками Название, Описание, Цена, Продолжительность — 16px */
+    .service-block {
+        margin-bottom: 16px;
+    }
+    
+    /* Отступ внутри блока между заголовком и значением — 8px */
+    .block-label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .block-value {
+        display: block;
+        font-size: 14px;
+    }
+    
+    /* Первый блок чуть выше */
+    .service-block:first-child {
+        margin-top: -12px;
+    }
+    
+    /* Укороченное описание отображается, полное — скрыто */
+    .full-description {
+        display: none;
+    }
+    
+    .short-description {
+        display: inline;
+    }
+    
+    /* Кнопка "Записаться" — отступ 8px сверху */
+    .button-row {
+        margin-top: 0px;
+        justify-content: center;
+    }
+    
+    .action-button {
+        width: 344px;
+        height: 41px;
+        font-size: 14px;
+        line-height: 41px;
+        border-radius: 40px;
+    }
+
+    /* Кнопка смотреть все */
+    /* Обертка для отступов и выравнивания по центру */
+    .view-all-button {
+        margin-top: -13px;
+        margin-bottom: 96px;
+        text-align: center;
+    }
+
+    /* Сброс всех старых стилей кнопки и стилизация под ссылку с подчеркиванием */
+    a.action-button.view-all {
+        all: unset; /* <— ВАЖНО: сбрасывает все стандартные и ранее заданные стили */
+        display: inline-block;
+        font-size: 12px;
+        color: #333333;
+        font-family: 'Involve', sans-serif;
+        position: relative;
+        cursor: pointer;
+        padding-bottom: 2px;
+        text-align: center;
+    }
+
+    /* Тонкая линия под текстом */
+    a.action-button.view-all::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #333333;
+    }
+
+    /*---------- 4 блок -----------*/
+    .why-choose {
+        padding: 45px 20px 45px 20px; /* отступ сверху 96px от предыдущей кнопки */
+        height: auto;
+        color: initial; /* сброс белого текста */
+    }
+
+    .background-image {
+        display: none;
+    }
+
+    .why-choose h4 {
+        font-size: 24px;
+        color: #465036;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .why-choose-content {
+        display: block;
+        padding: 0;
+    }
+
+    .why-choose-column {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: -48px;
+    }
+
+    .column-number {
+        font-size: 12px;
+        color: #808080;
+        margin-bottom: 16px;
+    }
+
+    .column-title {
+        font-size: 18px;
+        color: #465036;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .column-description {
+        font-size: 14px;
+        width: 318px;
+        color: #333333;
+        font-family: 'Involve', sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    /*--------- 5 блок отзывы ----------*/
+    .reviews {
+        padding-top: 10px; /* Отступ сверху от предыдущего блока */
+    }
+    
+    .reviews-header {
+        padding: 0 0px 0px 16px;
+        margin-bottom: 15px;
+    }
+    
+    .reviews-header h5 {
+        font-size: 24px;
+        color: #465036;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .view-reviews {
+        font-size: 12px;
+        color: #465036;
+        text-decoration: none;
+        margin-left: auto;
+        padding-right: 15px;
+    }
+    
+    .reviews-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0 16px;
+    }
+    
+    .review-card {
+        width: 344px;
+        height: 303px;
+        background-color: white;
+        border-radius: 20px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .review-header {
+        width: 344px;
+        height: 128px;
+        background-color: #465036;
+        border-radius: 20px 20px 0 0;
+        padding: 24px 24px;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .review-header p {
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    .review-text {
+        padding: 24px 24px 0 24px;
+        font-size: 14px;
+        width: 350px;
+        color: #333333;
+        line-height: 1.3;
+    }
+    
+    .review-text p {
+        margin-bottom: 0;
+    }
+    
+      /* Скрываем вторую и третью карточки */
+    .reviews-cards .review-card:nth-child(2),
+    .reviews-cards .review-card:nth-child(3) {
+        display: none;
+    }
+    
+    /*---------- 6 блок купите серт----------*/
+    .gift-section {
+        margin-top: 70px;
+        padding: 0 0px; /* небольшой отступ по краям */
+    }
+
+    .gift-row-top {
+        display: block;
+        text-align: center;
+        margin-bottom: -15px;
+    }
+
+    .gift-title {
+        font-size: 23px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .gift-line-right {
+        display: none; /* скрываем первое изображение */
+    }
+
+    .gift-row-middle {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .gift-line-left {
+        display: block;
+        margin: 0 0 5px 0;
+        width: 348px;
+        height: 31px;
+        border-radius: 40px;
+        object-fit: cover; /* Обрезает лишнее */
+        object-position: center; /* Центрирует обрезку */
+    }
+
+    .gift-subtitle {
+        font-size: 21.5px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .gift-button-wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gift-button {
+        width: 344px;
+        height: 41px;
+        font-size: 14px;
+        border-radius: 40px;
+        line-height: 41px;
+        margin-bottom: 50px;
+    }
+
+    a.gift-button {
+        line-height: 41px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
